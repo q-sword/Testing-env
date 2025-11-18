@@ -1,0 +1,63 @@
+GNU AFFERO GENERAL PUBLIC LICENSE (AGPLv3)
+==========================================
+
+This software is licensed under the GNU Affero General Public License v3.0
+for open source use.
+
+Copyright (c) 2025 Quantum Regularization Research
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+--------------------------------------------------------------------------------
+
+SUMMARY OF AGPL REQUIREMENTS:
+
+The AGPL is a strong copyleft license that requires:
+
+1. SOURCE CODE DISCLOSURE: If you distribute this software or provide it as
+   a network service, you must make the complete source code available to
+   users under the same AGPL license.
+
+2. MODIFICATIONS: Any modifications you make must also be licensed under AGPL
+   and the source code must be made available.
+
+3. NETWORK USE: Unlike GPL, AGPL requires source code disclosure even when
+   the software is used to provide a network service (SaaS).
+
+4. ATTRIBUTION: You must preserve all copyright notices and license information.
+
+5. PATENT GRANTS: Contributors grant patent licenses for their contributions.
+
+--------------------------------------------------------------------------------
+
+WHEN TO USE THIS LICENSE:
+
+Use the AGPL license (free) if you:
+- Are using this for personal, educational, or research purposes
+- Are building an open source project
+- Are willing to share your modifications and derivative works
+- Are willing to provide source code to network service users
+
+--------------------------------------------------------------------------------
+
+NEED A DIFFERENT LICENSE?
+
+If you need to use this software in a proprietary application or cannot
+comply with AGPL requirements, please obtain a commercial license.
+
+See LICENSE-COMMERCIAL for details.
+
+--------------------------------------------------------------------------------
+
+Full license text: https://www.gnu.org/licenses/agpl-3.0.html

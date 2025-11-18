@@ -74,7 +74,18 @@ The theory predicts bond lengths scale as R ∝ 1/√N_electrons:
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) for details
+**Dual Licensed**: This software is available under two licenses:
+
+- **Open Source (FREE)**: AGPLv3 - See [LICENSE-AGPL](LICENSE-AGPL)
+  - Free for personal, educational, research, and open source projects
+  - Requires sharing modifications and source code
+
+- **Commercial (PAID)**: See [LICENSE-COMMERCIAL](LICENSE-COMMERCIAL)
+  - For proprietary/closed-source applications
+  - No source code disclosure required
+  - [Contact for pricing](#contact)
+
+See [LICENSE](LICENSE) for complete details on which license applies to your use case.
 
 ## Discovery Timeline
 
