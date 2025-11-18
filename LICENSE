@@ -1,21 +1,50 @@
-MIT License
+DUAL LICENSE STRUCTURE
+======================
+
+This software is available under two different licenses:
+
+1. AGPLv3 License (Open Source) - FREE
+   See LICENSE-AGPL for full terms
+
+2. Commercial License - PAID
+   See LICENSE-COMMERCIAL for information
+
+--------------------------------------------------------------------------------
+
+WHICH LICENSE APPLIES TO YOU?
+
+OPEN SOURCE (FREE - AGPLv3):
+You may use this software for free under the terms of the GNU Affero General
+Public License v3.0 (AGPLv3) if you:
+- Use the software for personal, educational, or research purposes
+- Use the software in an open source project
+- Are willing to share your modifications and derivative works under AGPLv3
+- Are willing to provide source code to users who interact with your
+  application over a network
+
+COMMERCIAL (PAID):
+You must obtain a commercial license if you:
+- Use this software in a proprietary/closed-source product
+- Do not want to share your modifications under AGPLv3
+- Want to distribute this software without AGPLv3 obligations
+- Use this software in commercial applications without disclosing source code
+- Provide this software as a service without disclosing source code
+
+--------------------------------------------------------------------------------
+
+OBTAINING A COMMERCIAL LICENSE:
+
+For commercial licensing inquiries, please contact:
+Email: [INSERT YOUR EMAIL]
+Web: [INSERT YOUR WEBSITE]
+
+Commercial licenses are granted on a case-by-case basis with terms negotiated
+based on your specific use case, scale, and requirements.
+
+--------------------------------------------------------------------------------
 
 Copyright (c) 2025 Quantum Regularization Research
+All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+By using this software, you agree to comply with the terms of either the
+AGPLv3 license or a valid commercial license agreement.
