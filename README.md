@@ -62,13 +62,15 @@ The theory predicts bond lengths scale as R ∝ 1/√N_electrons:
 - **[FORMULAS.md](docs/FORMULAS.md)** - Machine-precision formulas
 
 ## Citation
-
 ```bibtex
-@article{quantum_regularization_2025,
-  title={Universal Quantum Regularization Eliminates Gravitational Chaos},
-  author={[Authors]},
-  journal={[Submitted to Nature/Science]},
-  year={2025}
+@article{sword_emmanuel_2025,
+  title={Quantum Regularization of Classical Chaos: A Unified Solution to the Gravitational Three-Body Problem},
+  author={Sword-Emmanuel, Adrian},
+  journal={arXiv preprint},
+  year={2025},
+  note={Submitted to nlin.CD}
+}
+```
 }
 ```
 
