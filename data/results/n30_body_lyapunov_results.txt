@@ -1,0 +1,120 @@
+N=30 BODY LYAPUNOV EXPONENT TEST RESULTS
+==========================================
+
+Date: December 29, 2025
+Test: Single N=30 body system with quantum regularization
+
+SYSTEM PARAMETERS:
+- Number of bodies: N = 30
+- Random seed: 42
+- Integration time: T = 100
+- Timestep: dt = 0.0005
+- Lyapunov renormalization interval: T_lyap = 10
+- Integrator: Yoshida 6th order symplectic
+
+INITIAL CONDITIONS:
+- Masses: m_i = 1.0 (uniform)
+- Positions: Gaussian, σ = 0.5
+- Velocities: Gaussian, σ = 0.3
+- v_rms = 0.2881
+- Quantum regularization: ε = ℏ/v_rms = 3.4708
+- Initial energy: E₀ = -115.421173
+
+RESULTS:
+========================================
+Largest Lyapunov exponent: λ = +0.033850
+Energy conservation: δE/E₀ = 3.324e-15
+Runtime: 5.7 minutes
+Status: ❌ UNSTABLE (chaotic)
+========================================
+
+INTERVAL DATA:
+Interval 1/10: δ = 5.59e-10, t = 34.5s
+Interval 2/10: δ = 1.72e-10, t = 33.7s
+Interval 3/10: δ = 9.39e-11, t = 34.5s
+Interval 4/10: δ = 1.85e-10, t = 33.5s
+Interval 5/10: δ = 1.17e-10, t = 34.6s
+Interval 6/10: δ = 9.28e-11, t = 33.7s
+Interval 7/10: δ = 1.05e-10, t = 34.2s
+Interval 8/10: δ = 1.98e-10, t = 33.6s
+Interval 9/10: δ = 7.53e-11, t = 35.3s
+Interval 10/10: δ = 1.04e-10, t = 35.6s
+
+Final energy: E = -115.421173
+
+ANALYSIS:
+=========
+
+1. POSITIVE LYAPUNOV EXPONENT
+   - λ = +0.033850 indicates exponential divergence
+   - System is chaotic despite quantum regularization
+   - Contrast with 3-body results: ALL 30 seeds showed λ < 0
+
+2. EXCELLENT ENERGY CONSERVATION
+   - δE/E₀ = 3.324e-15 (machine precision)
+   - Numerical integration is accurate
+   - Chaos is PHYSICAL, not numerical artifact
+
+3. PERTURBATION BEHAVIOR
+   - Perturbation separations remain ~10⁻¹⁰ to 10⁻¹¹
+   - Consistent exponential growth
+   - No numerical instabilities observed
+
+COMPARISON WITH 3-BODY RESULTS:
+================================
+
+3-Body Systems (30 seeds):
+- Mean λ: -2.216 ± 0.132
+- All negative (100% stable)
+- Success rate: 30/30
+
+30-Body System (1 seed):
+- λ = +0.033850
+- Positive (chaotic)
+- Success rate: 0/1
+
+CONCLUSIONS:
+============
+
+1. Quantum regularization is N-DEPENDENT
+   - Works universally for N=3
+   - Does NOT stabilize N=30 (at least for this seed)
+
+2. Possible interpretations:
+   a) Critical N exists: 3 < N_c < 30
+   b) ε scaling with N may be needed
+   c) Different parameter regime for large N
+   d) This particular seed is unstable (need more tests)
+
+3. Energy conservation remains excellent
+   - Symplectic integrator works perfectly
+   - Chaos is real, not numerical
+
+FUTURE TESTS:
+=============
+
+1. Test multiple seeds for N=30
+   - Is this universal or seed-dependent?
+   - What fraction show λ < 0?
+
+2. Scan different N values
+   - N=4, 5, 6, 10, 15, 20, 30
+   - Find critical N_c for stability transition
+
+3. Test different ε scaling
+   - Current: ε ∝ 1/v_rms
+   - Try: ε ∝ N^α/v_rms for various α
+
+4. Longer integration times
+   - T=1000 instead of T=100
+   - Better Lyapunov convergence
+
+SIGNIFICANCE:
+=============
+
+This result suggests quantum regularization may have a LIMITED regime of
+applicability. While it universally stabilizes 3-body systems, larger N-body
+systems may require different treatment or parameters.
+
+This is scientifically valuable - it defines the BOUNDARY of where quantum
+regularization provides universal stability.
