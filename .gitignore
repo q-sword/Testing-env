@@ -37,6 +37,10 @@ env/
 *.hdf5
 *.h5
 
+# Log files
+*.log
+nohup.out
+
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb
