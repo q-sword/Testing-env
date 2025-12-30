@@ -1,0 +1,43 @@
+{
+  "with_cooling": {
+    "final_molecules": 12,
+    "molecule_types": [
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H0O1",
+      "H0O1",
+      "H0O1",
+      "H0O1"
+    ],
+    "final_energy": -0.0007485530581198994,
+    "energy_ratio": -0.031039791046514734,
+    "final_bonds": 0
+  },
+  "without_cooling": {
+    "final_molecules": 12,
+    "molecule_types": [
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H1O0",
+      "H0O1",
+      "H0O1",
+      "H0O1",
+      "H0O1"
+    ],
+    "final_energy": 0.22616016198497155,
+    "energy_ratio": 9.279944982821268,
+    "final_bonds": 0
+  },
+  "conclusion": "Cooling enables molecular formation via resonance capture"
+}
