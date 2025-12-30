@@ -15,6 +15,7 @@ Expected: ~2-3 minutes with perfect energy conservation
 import numpy as np
 from numba import njit, prange
 import time
+import sys
 
 G = 1.0
 HBAR = 1.0
@@ -96,28 +97,11 @@ def evolve_all_tangents_exact(pos_ref, vel_ref, tangent_pos, tangent_vel,
 
     return pos_r, vel_r, new_tangent_pos, new_tangent_vel
 
-@njit
-def modified_gram_schmidt(vectors):
-    """Fast modified Gram-Schmidt"""
-    n_vectors, dim = vectors.shape
-    Q = np.zeros((n_vectors, dim))
-    norms = np.zeros(n_vectors)
-
-    for i in range(n_vectors):
-        q = vectors[i].copy()
-
-        for j in range(i):
-            proj = np.dot(q, Q[j])
-            q = q - proj * Q[j]
-
-        norm = np.linalg.norm(q)
-        norms[i] = norm
-        if norm > 1e-15:
-            Q[i] = q / norm
-        else:
-            Q[i] = q
-
-    return Q, norms
+def full_qr_decomposition(vectors):
+    """Full QR decomposition (numpy, not numba)"""
+    Q, R = np.linalg.qr(vectors.T)
+    norms = np.abs(np.diag(R))
+    return Q.T, norms
 
 @njit
 def compute_energy(pos, vel, masses, epsilon):
@@ -170,7 +154,7 @@ def compute_fast_accurate_spectrum(seed=42, N=30, T_total=50, T_lyap=5, dt=0.001
     print("Strategy:")
     print("  ✓ EXACT O(N²) forces (energy conservation)")
     print("  ✓ PARALLEL tangent evolution (speed)")
-    print("  ✓ Modified Gram-Schmidt (efficiency)")
+    print("  ✓ FULL QR decomposition (accuracy)")
     print(f"  ✓ dt={dt} (optimized)")
     print()
 
@@ -180,7 +164,7 @@ def compute_fast_accurate_spectrum(seed=42, N=30, T_total=50, T_lyap=5, dt=0.001
 
     tangent_flat = np.concatenate([tangent_pos.reshape(n_vectors, -1),
                                     tangent_vel.reshape(n_vectors, -1)], axis=1)
-    tangent_flat, _ = modified_gram_schmidt(tangent_flat)
+    tangent_flat, _ = full_qr_decomposition(tangent_flat)
 
     tangent_pos = tangent_flat[:, :N*3].reshape(n_vectors, N, 3)
     tangent_vel = tangent_flat[:, N*3:].reshape(n_vectors, N, 3)
@@ -204,11 +188,11 @@ def compute_fast_accurate_spectrum(seed=42, N=30, T_total=50, T_lyap=5, dt=0.001
             pos, vel, tangent_pos, tangent_vel, masses, epsilon, dt, steps_per_interval
         )
 
-        # Orthonormalize
+        # Orthonormalize with full QR
         tangent_flat = np.concatenate([new_tangent_pos.reshape(n_vectors, -1),
                                         new_tangent_vel.reshape(n_vectors, -1)], axis=1)
 
-        tangent_flat, norms = modified_gram_schmidt(tangent_flat)
+        tangent_flat, norms = full_qr_decomposition(tangent_flat)
 
         for i in range(n_vectors):
             if norms[i] > 1e-15:
@@ -221,6 +205,7 @@ def compute_fast_accurate_spectrum(seed=42, N=30, T_total=50, T_lyap=5, dt=0.001
         current_lambdas = lyapunov_sums / ((interval + 1) * T_lyap)
 
         print(f"[{interval+1}/{n_intervals}] λ_max={current_lambdas[0]:+.6f} Σλ={np.sum(current_lambdas):+.6f} t={elapsed:.1f}s")
+        sys.stdout.flush()
 
     spectrum = lyapunov_sums / T_total
 
