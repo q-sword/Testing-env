@@ -1,0 +1,26 @@
+[
+  {
+    "molecule": "H2+",
+    "lambda": 15.982122114619074,
+    "stable": false,
+    "epsilon": 0.1,
+    "dE_rel": 3.368651446578847e-10,
+    "runtime": 8.419447660446167
+  },
+  {
+    "molecule": "H2",
+    "lambda": 15.806651148507523,
+    "stable": false,
+    "epsilon": 0.1,
+    "dE_rel": 0.06888371952349912,
+    "runtime": 1.509026288986206
+  },
+  {
+    "molecule": "HeH+",
+    "lambda": 14.98565916609983,
+    "stable": false,
+    "epsilon": 0.1,
+    "dE_rel": 0.0020728508807583844,
+    "runtime": 1.5282807350158691
+  }
+]
