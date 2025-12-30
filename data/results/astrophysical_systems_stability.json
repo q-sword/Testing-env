@@ -1,0 +1,158 @@
+[
+  {
+    "system": "Sun-Jupiter-Saturn",
+    "epsilon": 0.001,
+    "eps_over_r": 0.0008210526315789474,
+    "r_typical": 1.2179487179487178,
+    "lambda": -9.454373613825151,
+    "stable": true,
+    "masses": [
+      1.0,
+      0.000955,
+      0.000285
+    ]
+  },
+  {
+    "system": "Sun-Jupiter-Saturn",
+    "epsilon": 0.01,
+    "eps_over_r": 0.008210526315789475,
+    "r_typical": 1.2179487179487178,
+    "lambda": -6.720038829563764,
+    "stable": true,
+    "masses": [
+      1.0,
+      0.000955,
+      0.000285
+    ]
+  },
+  {
+    "system": "Sun-Jupiter-Saturn",
+    "epsilon": 0.1,
+    "eps_over_r": 0.08210526315789475,
+    "r_typical": 1.2179487179487178,
+    "lambda": -6.489022478704816,
+    "stable": true,
+    "masses": [
+      1.0,
+      0.000955,
+      0.000285
+    ]
+  },
+  {
+    "system": "Sun-Jupiter-Saturn",
+    "epsilon": 1.0,
+    "eps_over_r": 0.8210526315789475,
+    "r_typical": 1.2179487179487178,
+    "lambda": -5.79359158781405,
+    "stable": true,
+    "masses": [
+      1.0,
+      0.000955,
+      0.000285
+    ]
+  },
+  {
+    "system": "Lagrange Triple Star",
+    "epsilon": 0.001,
+    "eps_over_r": 0.0009999999999999998,
+    "r_typical": 1.0000000000000002,
+    "lambda": -5.843974977686051,
+    "stable": true,
+    "masses": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  {
+    "system": "Lagrange Triple Star",
+    "epsilon": 0.01,
+    "eps_over_r": 0.009999999999999998,
+    "r_typical": 1.0000000000000002,
+    "lambda": -6.12881027203206,
+    "stable": true,
+    "masses": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  {
+    "system": "Lagrange Triple Star",
+    "epsilon": 0.1,
+    "eps_over_r": 0.09999999999999998,
+    "r_typical": 1.0000000000000002,
+    "lambda": -9.145135758502303,
+    "stable": true,
+    "masses": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  {
+    "system": "Lagrange Triple Star",
+    "epsilon": 1.0,
+    "eps_over_r": 0.9999999999999998,
+    "r_typical": 1.0000000000000002,
+    "lambda": -11.71406915601753,
+    "stable": true,
+    "masses": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  {
+    "system": "Hierarchical Triple (Alpha Cen-like)",
+    "epsilon": 0.001,
+    "eps_over_r": 2.3060957798447225e-06,
+    "r_typical": 433.6333333333334,
+    "lambda": -4.938610833454594,
+    "stable": true,
+    "masses": [
+      1.1,
+      0.9,
+      0.1
+    ]
+  },
+  {
+    "system": "Hierarchical Triple (Alpha Cen-like)",
+    "epsilon": 0.01,
+    "eps_over_r": 2.3060957798447226e-05,
+    "r_typical": 433.6333333333334,
+    "lambda": -1.7900527505592259,
+    "stable": true,
+    "masses": [
+      1.1,
+      0.9,
+      0.1
+    ]
+  },
+  {
+    "system": "Hierarchical Triple (Alpha Cen-like)",
+    "epsilon": 0.1,
+    "eps_over_r": 0.00023060957798447227,
+    "r_typical": 433.6333333333334,
+    "lambda": -3.4254488529754115,
+    "stable": true,
+    "masses": [
+      1.1,
+      0.9,
+      0.1
+    ]
+  },
+  {
+    "system": "Hierarchical Triple (Alpha Cen-like)",
+    "epsilon": 1.0,
+    "eps_over_r": 0.0023060957798447224,
+    "r_typical": 433.6333333333334,
+    "lambda": -8.49078083588198,
+    "stable": true,
+    "masses": [
+      1.1,
+      0.9,
+      0.1
+    ]
+  }
+]

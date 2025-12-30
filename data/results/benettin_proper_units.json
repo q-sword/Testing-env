@@ -1,0 +1,231 @@
+{
+  "method": "Benettin (1980) - Dimensionless Units",
+  "n_seeds": 30,
+  "N_particles": 30,
+  "dt": 0.01,
+  "T_total": 200.0,
+  "T_renorm": 10.0,
+  "statistics": {
+    "mean_lambda": -0.0003546245039037961,
+    "std_lambda": 2.3042754910873146e-05,
+    "min_lambda": -0.0004159501774222359,
+    "max_lambda": -0.00031021658299598665,
+    "n_negative": 0,
+    "n_positive": 0,
+    "n_neutral": 30,
+    "mean_energy_error": 9.892297375565866e-11,
+    "max_energy_error": 1.1756318018738356e-10
+  },
+  "seed_results": [
+    {
+      "seed": 0,
+      "lambda": -0.0003272885555844012,
+      "epsilon": 42.09774912566172,
+      "energy_error": 8.881521137337755e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 1,
+      "lambda": -0.00037195384433895965,
+      "epsilon": 39.76749548505837,
+      "energy_error": 1.0455820092081224e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 2,
+      "lambda": -0.00036312178733047094,
+      "epsilon": 39.63628828625284,
+      "energy_error": 1.0555002442776071e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 3,
+      "lambda": -0.00034189717052250245,
+      "epsilon": 40.2204530327875,
+      "energy_error": 1.0124649214329746e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 4,
+      "lambda": -0.0003621289155370446,
+      "epsilon": 41.19759244735782,
+      "energy_error": 9.44716191269877e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 5,
+      "lambda": -0.0003645043095441565,
+      "epsilon": 40.5374421320309,
+      "energy_error": 9.897114014057126e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 6,
+      "lambda": -0.00039324739822211457,
+      "epsilon": 38.18283636931853,
+      "energy_error": 1.1756318018738356e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 7,
+      "lambda": -0.0003614927647037524,
+      "epsilon": 40.94165222127109,
+      "energy_error": 9.621855282642242e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 8,
+      "lambda": -0.00032546719018503603,
+      "epsilon": 40.390153508427936,
+      "energy_error": 1.0002160883818633e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 9,
+      "lambda": -0.0003120431608501747,
+      "epsilon": 41.93304501365488,
+      "energy_error": 8.982278875828595e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 10,
+      "lambda": -0.00035329497509298805,
+      "epsilon": 39.670923005836066,
+      "energy_error": 1.0531196327659922e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 11,
+      "lambda": -0.00033938597006134635,
+      "epsilon": 41.30421825156144,
+      "energy_error": 9.38173499759312e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 12,
+      "lambda": -0.00034567875675010543,
+      "epsilon": 40.003537397420104,
+      "energy_error": 1.0280644019768954e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 13,
+      "lambda": -0.0003652254528255995,
+      "epsilon": 40.663819553827196,
+      "energy_error": 9.809492861036989e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 14,
+      "lambda": -0.00031021658299598665,
+      "epsilon": 40.17884850039364,
+      "energy_error": 1.0152421971805786e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 15,
+      "lambda": -0.0003585693178340456,
+      "epsilon": 41.71774662786833,
+      "energy_error": 9.115265952329106e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 16,
+      "lambda": -0.00033994533499031253,
+      "epsilon": 41.041192788030905,
+      "energy_error": 9.550181525078404e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 17,
+      "lambda": -0.00033691752616113875,
+      "epsilon": 40.71863162058889,
+      "energy_error": 9.770334549055267e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 18,
+      "lambda": -0.0003300891795204392,
+      "epsilon": 40.060648376255784,
+      "energy_error": 1.0237429897407488e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 19,
+      "lambda": -0.00038438693151891774,
+      "epsilon": 39.98901762178643,
+      "energy_error": 1.0292179561762614e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 20,
+      "lambda": -0.0003515258959084391,
+      "epsilon": 41.62973307774896,
+      "energy_error": 9.171794697768063e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 21,
+      "lambda": -0.0003793645725369964,
+      "epsilon": 39.917743947861084,
+      "energy_error": 1.0346972847642813e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 22,
+      "lambda": -0.00035711263955702554,
+      "epsilon": 41.3074225722712,
+      "energy_error": 9.3803722633474e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 23,
+      "lambda": -0.0003644152833591334,
+      "epsilon": 41.222607343052886,
+      "energy_error": 9.433090357811645e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 24,
+      "lambda": -0.00036279783326066564,
+      "epsilon": 41.784190063495274,
+      "energy_error": 9.070089384591727e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 25,
+      "lambda": -0.0003541638740331749,
+      "epsilon": 40.02377369687043,
+      "energy_error": 1.0265871178900927e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 26,
+      "lambda": -0.0003358319120685913,
+      "epsilon": 40.629322816548274,
+      "energy_error": 9.831573017283212e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 27,
+      "lambda": -0.00038440038923586497,
+      "epsilon": 39.153498502593656,
+      "energy_error": 1.093547002466942e-10,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 28,
+      "lambda": -0.0004159501774222359,
+      "epsilon": 40.77145756371102,
+      "energy_error": 9.730154781354832e-11,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 29,
+      "lambda": -0.00034631741516226206,
+      "epsilon": 40.73666836901159,
+      "energy_error": 9.758769175799777e-11,
+      "status": "WEAKLY STABLE"
+    }
+  ]
+}
