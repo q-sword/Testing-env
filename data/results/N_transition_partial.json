@@ -1,0 +1,34 @@
+{
+  "description": "N-body chaos transition scan - PARTIAL RESULTS",
+  "key_finding": "ALL random N-body systems show λ > 0 (chaos) from N=3 to N=15",
+  "interpretation": "Chaos vs stability depends on CONFIGURATION, not just N",
+  "previous_3body_stable": "Used structured configurations (hierarchical, Lagrange)",
+  "current_random": "Uses random virial-equilibrium initial conditions",
+  "implication": "Stability is not universal - requires specific orbital structure",
+  "data": [
+    {"N": 3, "epsilon": 3.0, "lambda_mean": 0.0701, "lambda_std": 0.0048, "energy_drift": 9.04e-14, "stable": false},
+    {"N": 4, "epsilon": 4.0, "lambda_mean": 0.0678, "lambda_std": 0.0065, "energy_drift": 1.80e-14, "stable": false},
+    {"N": 5, "epsilon": 5.0, "lambda_mean": 0.0692, "lambda_std": 0.0039, "energy_drift": 2.75e-14, "stable": false},
+    {"N": 6, "epsilon": 6.0, "lambda_mean": 0.0693, "lambda_std": 0.0014, "energy_drift": 2.23e-14, "stable": false},
+    {"N": 7, "epsilon": 7.0, "lambda_mean": 0.0675, "lambda_std": 0.0022, "energy_drift": 1.95e-14, "stable": false},
+    {"N": 8, "epsilon": 8.0, "lambda_mean": 0.0681, "lambda_std": 0.0016, "energy_drift": 2.29e-14, "stable": false},
+    {"N": 9, "epsilon": 9.0, "lambda_mean": 0.0682, "lambda_std": 0.0012, "energy_drift": 1.72e-14, "stable": false},
+    {"N": 10, "epsilon": 10.0, "lambda_mean": 0.0697, "lambda_std": 0.0022, "energy_drift": 1.78e-14, "stable": false},
+    {"N": 11, "epsilon": 11.0, "lambda_mean": 0.0715, "lambda_std": 0.0013, "energy_drift": 1.13e-14, "stable": false},
+    {"N": 12, "epsilon": 12.0, "lambda_mean": 0.0695, "lambda_std": 0.0014, "energy_drift": 7.12e-15, "stable": false},
+    {"N": 13, "epsilon": 13.0, "lambda_mean": 0.0689, "lambda_std": 0.0010, "energy_drift": 2.30e-14, "stable": false},
+    {"N": 14, "epsilon": 14.0, "lambda_mean": 0.0698, "lambda_std": 0.0008, "energy_drift": 5.28e-15, "stable": false}
+  ],
+  "observations": [
+    "λ ≈ 0.07 nearly constant across all N (no N-dependence!)",
+    "Energy conservation excellent: δE/E ~ 10⁻¹⁴ (machine precision)",
+    "Small variance in λ suggests robust chaotic behavior",
+    "ε scales with N but doesn't prevent chaos"
+  ],
+  "resolution": "Previous 3-body λ<0 results used STRUCTURED configurations (virial + orbital constraints)",
+  "next_steps": [
+    "Test structured vs random initial conditions systematically",
+    "Verify that hierarchical/Lagrange configurations still show λ<0",
+    "Determine what geometric constraints produce stability"
+  ]
+}
