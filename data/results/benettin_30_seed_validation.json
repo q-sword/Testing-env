@@ -1,0 +1,231 @@
+{
+  "method": "Benettin (1980)",
+  "n_seeds": 30,
+  "N_particles": 30,
+  "dt": 0.01,
+  "T_total": 100.0,
+  "T_renorm": 10.0,
+  "statistics": {
+    "mean_lambda": 1.332952304735909e-09,
+    "std_lambda": 1.4978813369563868e-08,
+    "min_lambda": -3.3097861312852574e-08,
+    "max_lambda": 2.3650450696507273e-08,
+    "n_negative": 14,
+    "n_positive": 16,
+    "n_neutral": 30,
+    "mean_energy_error": 0.0,
+    "max_energy_error": 0.0
+  },
+  "seed_results": [
+    {
+      "seed": 0,
+      "lambda": 1.943680400166171e-08,
+      "epsilon_bohr": 7457649041732678.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 1,
+      "lambda": 5.5944008310568715e-09,
+      "epsilon_bohr": 7044842794587119.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 2,
+      "lambda": -8.742117879992148e-09,
+      "epsilon_bohr": 7021599337139556.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 3,
+      "lambda": 1.9903425605544284e-08,
+      "epsilon_bohr": 7125084576913401.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 4,
+      "lambda": 7.418987950348309e-09,
+      "epsilon_bohr": 7298185585163448.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 5,
+      "lambda": -8.966044944033493e-09,
+      "epsilon_bohr": 7181239442703387.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 6,
+      "lambda": 2.3650450696507273e-08,
+      "epsilon_bohr": 6764119198161713.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 7,
+      "lambda": -1.157540631454864e-08,
+      "epsilon_bohr": 7252845574795695.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 8,
+      "lambda": -3.6062793624341197e-09,
+      "epsilon_bohr": 7155147148329364.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 9,
+      "lambda": 1.4683028939347824e-08,
+      "epsilon_bohr": 7428471580025385.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 10,
+      "lambda": 1.0748086652244384e-08,
+      "epsilon_bohr": 7027734904685925.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 11,
+      "lambda": -2.8219473464501274e-10,
+      "epsilon_bohr": 7317074429414226.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 12,
+      "lambda": -7.106592459722619e-09,
+      "epsilon_bohr": 7086657803182441.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 13,
+      "lambda": -8.352462142536283e-09,
+      "epsilon_bohr": 7203627301392524.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 14,
+      "lambda": -2.9315851787913755e-08,
+      "epsilon_bohr": 7117714301599805.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 15,
+      "lambda": 3.4697697986297067e-09,
+      "epsilon_bohr": 7390331303317125.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 16,
+      "lambda": -1.5435969800763002e-08,
+      "epsilon_bohr": 7270479263715596.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 17,
+      "lambda": 2.0499251686045545e-08,
+      "epsilon_bohr": 7213337301704903.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 18,
+      "lambda": 2.0462349525958988e-08,
+      "epsilon_bohr": 7096775057559028.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 19,
+      "lambda": -3.3097861312852574e-08,
+      "epsilon_bohr": 7084085613621486.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 20,
+      "lambda": -1.9467362212223084e-08,
+      "epsilon_bohr": 7374739634371880.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 21,
+      "lambda": -1.6111879639178636e-08,
+      "epsilon_bohr": 7071459426780389.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 22,
+      "lambda": 1.5750937489126272e-08,
+      "epsilon_bohr": 7317642077323367.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 23,
+      "lambda": 1.0627094048243736e-08,
+      "epsilon_bohr": 7302616993416476.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 24,
+      "lambda": 4.131389189788575e-09,
+      "epsilon_bohr": 7402101809682055.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 25,
+      "lambda": 1.0094394825981782e-08,
+      "epsilon_bohr": 7090242679389320.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 26,
+      "lambda": -1.384564785833966e-09,
+      "epsilon_bohr": 7197516177518812.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 27,
+      "lambda": -6.789929460493493e-09,
+      "epsilon_bohr": 6936072750986063.0,
+      "energy_error": 0.0,
+      "status": "WEAKLY STABLE"
+    },
+    {
+      "seed": 28,
+      "lambda": 4.242274922998692e-09,
+      "epsilon_bohr": 7222695458667817.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    },
+    {
+      "seed": 29,
+      "lambda": 1.951043981576414e-08,
+      "epsilon_bohr": 7216532525734313.0,
+      "energy_error": 0.0,
+      "status": "NEUTRAL"
+    }
+  ]
+}
