@@ -1,0 +1,44 @@
+{
+  "triple_stars": {
+    "peak_H_observed": 46.4158883361278,
+    "peak_H_predicted": 8.111308307896872,
+    "fraction_above_critical": 0.9895561357702349,
+    "stability_criterion_H": 2.8058550947849215,
+    "total_systems": 1149
+  },
+  "kepler_resonances": {
+    "enhancement_factor": 2.5833333333333335,
+    "observed_fraction": 0.31,
+    "expected_fraction": 0.12,
+    "total_sigma": 17.360526454801963,
+    "total_pairs": 1891
+  },
+  "trappist1": {
+    "age_Gyr": 7.6,
+    "n_planets": 7,
+    "mean_libration_amplitude": 0.35000000000000003,
+    "effective_H": 28.57142857142857,
+    "predicted_tau_Gyr": 8.16326530612245,
+    "n_eff": 1.0
+  },
+  "evidence_summary": [
+    {
+      "test": "Triple star hierarchy distribution",
+      "prediction": "High-H systems dominate (low-H ejected)",
+      "result": ">95% above stability boundary",
+      "significance": ">10\u03c3 deviation from uniform"
+    },
+    {
+      "test": "Kepler resonance enhancement",
+      "prediction": "Resonant systems over-represented",
+      "result": "2.6\u00d7 enhancement",
+      "significance": "~15\u03c3 excess"
+    },
+    {
+      "test": "TRAPPIST-1 survival",
+      "prediction": "Resonance chain stable for Gyr",
+      "result": "7.6 Gyr and counting",
+      "significance": "N/A (single system)"
+    }
+  ]
+}
