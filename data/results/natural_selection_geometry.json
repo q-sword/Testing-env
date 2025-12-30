@@ -1,0 +1,30 @@
+{
+  "H=1.0": {
+    "landscape_hierarchy": 10.055027713001161,
+    "final_mean_fitness": 0.8938056503905943,
+    "final_max_fitness": 1.3168197885300152,
+    "total_extinctions": 3425,
+    "final_diversity": 0.29145240989285137
+  },
+  "H=3.0": {
+    "landscape_hierarchy": 24.27734544251609,
+    "final_mean_fitness": 2.262319030541698,
+    "final_max_fitness": 2.627320450756738,
+    "total_extinctions": 392,
+    "final_diversity": 0.1953432542896569
+  },
+  "H=10.0": {
+    "landscape_hierarchy": 95.59105578605629,
+    "final_mean_fitness": 7.66648083240118,
+    "final_max_fitness": 8.207758495283938,
+    "total_extinctions": 76,
+    "final_diversity": 0.09270005591847759
+  },
+  "H=30.0": {
+    "landscape_hierarchy": 248.0867968302749,
+    "final_mean_fitness": 15.097830680457047,
+    "final_max_fitness": 15.935943756179777,
+    "total_extinctions": 74,
+    "final_diversity": 0.05526151766902612
+  }
+}
