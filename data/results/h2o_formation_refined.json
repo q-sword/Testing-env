@@ -1,0 +1,23 @@
+{
+  "initial": {
+    "n_H": 8,
+    "n_O": 4,
+    "T_K": 5000
+  },
+  "final": {
+    "T_K": 300,
+    "molecules": {
+      "H2O": 0,
+      "H2": 0,
+      "OH": 1,
+      "O2": 0,
+      "H": 7,
+      "O": 3,
+      "other": 0
+    }
+  },
+  "history_length": 100,
+  "final_H2O": 0,
+  "final_H2": 0,
+  "mechanism": "Cooling drives atoms into stable molecular geometries"
+}
