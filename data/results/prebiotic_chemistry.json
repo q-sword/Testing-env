@@ -1,0 +1,32 @@
+{
+  "environments": {
+    "hydrothermal": {
+      "glycine": -6.866496711955318e+126,
+      "adenine": -1.4904506669945732e+188,
+      "ribose": -2.334174820704844e+200,
+      "total_organic": -2.3341748207063344e+200
+    },
+    "atmospheric": {
+      "glycine": -1.3283309401670135e+148,
+      "adenine": -6.40344678097008e+242,
+      "ribose": -1.4093655466112518e+213,
+      "total_organic": -6.40344678097008e+242
+    },
+    "meteoritic": {
+      "glycine": -5.504482713421716e+249,
+      "adenine": NaN,
+      "ribose": NaN,
+      "total_organic": NaN
+    }
+  },
+  "polymerization": {
+    "without_catalysis": {
+      "max_chain": 100,
+      "avg_chain": 100.0
+    },
+    "with_catalysis": {
+      "max_chain": 100,
+      "avg_chain": 100.0
+    }
+  }
+}

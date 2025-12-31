@@ -1,0 +1,21 @@
+{
+  "co2": {
+    "n_co2": 5,
+    "max_possible": 6,
+    "efficiency": 0.8333333333333334,
+    "hierarchy_ratio": 290.12417314610656
+  },
+  "glycine": {
+    "estimated_glycine": 0,
+    "target": 4,
+    "bonds": {},
+    "hierarchy_low": NaN
+  },
+  "adenine": {
+    "ring_score": 40,
+    "cn_bonds": 26,
+    "estimated_adenine": 2,
+    "target": 2,
+    "hierarchy_low": 193.4161154307377
+  }
+}
