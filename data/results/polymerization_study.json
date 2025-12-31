@@ -1,0 +1,44 @@
+{
+  "catalysis_comparison": [
+    {
+      "label": "No catalysis (abiotic)",
+      "catalysis": 1.0,
+      "H_eff": 66.31409671911007,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "n_chains": 1
+    },
+    {
+      "label": "Mineral catalysis (clay, FeS)",
+      "catalysis": 10.0,
+      "H_eff": 663.1409671911007,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "n_chains": 1
+    },
+    {
+      "label": "Ribozyme (RNA catalysis)",
+      "catalysis": 100.0,
+      "H_eff": 6631.409671911007,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "n_chains": 1
+    },
+    {
+      "label": "Simple enzyme",
+      "catalysis": 1000.0,
+      "H_eff": 66314.09671911006,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "n_chains": 1
+    },
+    {
+      "label": "Modern enzyme (fully evolved)",
+      "catalysis": 1000000.0,
+      "H_eff": 66314096.719110064,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "n_chains": 1
+    }
+  ]
+}
