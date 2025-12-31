@@ -1,0 +1,46 @@
+{
+  "basic_assembly": {
+    "n_lipids": 40,
+    "T": 300,
+    "final_clusters": 7,
+    "largest_cluster": 11,
+    "aggregated_fraction": 0.9
+  },
+  "temperature_comparison": [
+    {
+      "T": 250,
+      "H": 13.925960311013114,
+      "clusters": 5,
+      "largest": 13,
+      "aggregated": 0.9333333333333333
+    },
+    {
+      "T": 300,
+      "H": 11.604966925844261,
+      "clusters": 6,
+      "largest": 9,
+      "aggregated": 0.9
+    },
+    {
+      "T": 350,
+      "H": 9.94711450786651,
+      "clusters": 8,
+      "largest": 9,
+      "aggregated": 0.8
+    },
+    {
+      "T": 400,
+      "H": 8.703725194383196,
+      "clusters": 7,
+      "largest": 10,
+      "aggregated": 0.7333333333333333
+    },
+    {
+      "T": 500,
+      "H": 6.962980155506557,
+      "clusters": 6,
+      "largest": 7,
+      "aggregated": 0.8333333333333334
+    }
+  ]
+}

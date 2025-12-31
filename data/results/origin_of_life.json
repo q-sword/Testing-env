@@ -1,0 +1,22 @@
+{
+  "stages": {
+    "monomers": true,
+    "polymers": true,
+    "membranes": true,
+    "rna_world": false,
+    "metabolism": false,
+    "protocell": false
+  },
+  "pools": {
+    "amino_acids": 170,
+    "nucleotides": 5,
+    "lipids": 9,
+    "peptides": 66,
+    "rna": 37,
+    "membranes": 3,
+    "ribozymes": 0,
+    "protocells": 0
+  },
+  "success": false,
+  "temperature": 350
+}
