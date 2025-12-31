@@ -1,0 +1,52 @@
+{
+  "conditions": [
+    {
+      "label": "Dilute, no ATP",
+      "dG": 0.1,
+      "K_eq": 0.023670216284239484,
+      "max_length": 1,
+      "n_bonds": 0,
+      "catalysis": 1.0
+    },
+    {
+      "label": "Concentrated, no ATP",
+      "dG": 0.1,
+      "K_eq": 0.023670216284239484,
+      "max_length": 1,
+      "n_bonds": 0,
+      "catalysis": 1.0
+    },
+    {
+      "label": "Dilute + ATP",
+      "dG": -0.42000000000000004,
+      "K_eq": 6735202.3751981845,
+      "max_length": 1,
+      "n_bonds": 0,
+      "catalysis": 1.0
+    },
+    {
+      "label": "Ribozyme, no ATP",
+      "dG": 0.1,
+      "K_eq": 0.023670216284239484,
+      "max_length": 1,
+      "n_bonds": 0,
+      "catalysis": 100.0
+    },
+    {
+      "label": "Ribozyme + ATP",
+      "dG": -0.42000000000000004,
+      "K_eq": 6735202.3751981845,
+      "max_length": 1,
+      "n_bonds": 0,
+      "catalysis": 100.0
+    },
+    {
+      "label": "Enzyme + ATP (life)",
+      "dG": -0.42000000000000004,
+      "K_eq": 6735202.3751981845,
+      "max_length": 50,
+      "n_bonds": 49,
+      "catalysis": 1000000.0
+    }
+  ]
+}
