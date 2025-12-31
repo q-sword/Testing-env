@@ -892,3 +892,289 @@ REMAINING QUESTION:
   Why does the fine structure constant encode G₂/octonion geometry?
   What is the physical mechanism?
 """)
+
+print("\n" + "=" * 70)
+print("EXPLORING THE RESIDUAL ERROR")
+print("=" * 70)
+print("""
+The formula gives α = 0.007297348513
+Experimental α = 0.007297352569
+Residual = 0.000000004056 (4×10⁻⁹)
+
+This is a 0.000056% error. Is this:
+  a) Experimental uncertainty?
+  b) A higher-order correction?
+  c) Evidence the formula is just approximate?
+""")
+
+# Experimental uncertainty
+print("Experimental uncertainty in α:")
+print(f"  α = 7.2973525693(11) × 10⁻³")
+print(f"  Uncertainty: ± 1.1 × 10⁻¹²")
+print(f"  Relative uncertainty: 1.5 × 10⁻¹⁰ (0.000000015%)")
+print()
+print(f"Our formula error: {abs(alpha_minus - ALPHA_EXPERIMENTAL):.6e}")
+print(f"Experimental uncertainty: 1.1e-12")
+print(f"Ratio: {abs(alpha_minus - ALPHA_EXPERIMENTAL) / 1.1e-12:.1f}×")
+print()
+print("Our formula is ~3600× worse than experimental precision.")
+print("So the 0.000056% error is REAL, not experimental noise.")
+
+print("\n" + "=" * 70)
+print("SEARCHING FOR HIGHER-ORDER CORRECTIONS")
+print("=" * 70)
+
+# The residual
+residual = ALPHA_EXPERIMENTAL - alpha_minus
+print(f"\nResidual: Δα = {residual:.6e}")
+print(f"Residual / α = {residual / ALPHA_EXPERIMENTAL:.6e}")
+print(f"Residual / α² = {residual / ALPHA_EXPERIMENTAL**2:.6f}")
+print(f"Residual / α³ = {residual / ALPHA_EXPERIMENTAL**3:.3f}")
+
+# What if there's an α² correction?
+print("\n" + "-" * 70)
+print("Testing: 1/α + 156α + k×α² = 14π²")
+print("-" * 70)
+
+# Find k that eliminates the residual
+# 1/α + 156α + kα² = 14π²
+# k = (14π² - 1/α - 156α) / α²
+k_corr = (14*np.pi**2 - 1/ALPHA_EXPERIMENTAL - 156*ALPHA_EXPERIMENTAL) / ALPHA_EXPERIMENTAL**2
+print(f"Required k for exact match: k = {k_corr:.4f}")
+print()
+print("Is this a simple number?")
+print(f"  k ≈ {k_corr:.3f}")
+print(f"  k/π = {k_corr/np.pi:.4f}")
+print(f"  k/π² = {k_corr/np.pi**2:.4f}")
+
+# What if the coefficient of π² is slightly off from 14?
+print("\n" + "-" * 70)
+print("Testing: What if coefficient isn't exactly 14?")
+print("-" * 70)
+
+# Solve for the exact coefficient
+# 1/α + 156α = n×π²
+n_exact = (1/ALPHA_EXPERIMENTAL + 156*ALPHA_EXPERIMENTAL) / np.pi**2
+print(f"For experimental α: n = {n_exact:.12f}")
+print(f"Difference from 14: {n_exact - 14:.12f}")
+print()
+print("Looking for patterns in n:")
+print(f"  n - 14 = {n_exact - 14:.9e}")
+print(f"  (n - 14)/α = {(n_exact - 14)/ALPHA_EXPERIMENTAL:.6f}")
+print(f"  (n - 14)/α² = {(n_exact - 14)/ALPHA_EXPERIMENTAL**2:.3f}")
+print(f"  (n - 14)×137 = {(n_exact - 14)*137:.6f}")
+
+# What if n = 14 + ε for some ε related to α?
+print("\n" + "-" * 70)
+print("Testing: 1/α + 156α = (14 + ε)π² for small ε")
+print("-" * 70)
+
+eps = n_exact - 14
+print(f"ε = {eps:.12f}")
+print()
+print("Is ε expressible in terms of α?")
+for factor, name in [(1, "ε/1"), (1/137, "ε×137"), (1/137**2, "ε×137²"),
+                     (np.pi, "ε/π"), (np.pi**2, "ε/π²")]:
+    print(f"  {name} = {eps/factor:.6f}")
+
+# What about writing it as a correction to 156?
+print("\n" + "-" * 70)
+print("Testing: Correction to 156 instead of 14")
+print("-" * 70)
+
+# Solve: 1/α + k×α = 14π²
+k_exact = (14*np.pi**2 - 1/ALPHA_EXPERIMENTAL) / ALPHA_EXPERIMENTAL
+print(f"For experimental α with n=14 fixed: k = {k_exact:.9f}")
+print(f"Difference from 156: k - 156 = {k_exact - 156:.9f}")
+print()
+print(f"k = 156 + {k_exact - 156:.6f}")
+print(f"k = 156(1 + {(k_exact - 156)/156:.6e})")
+
+print("\n" + "=" * 70)
+print("ALTERNATIVE FORMULA STRUCTURES")
+print("=" * 70)
+
+# What if we use different constants?
+print("\nTrying other geometric constants instead of π²...")
+print()
+
+constants = [
+    ("π²", np.pi**2),
+    ("e²", np.e**2),
+    ("π×e", np.pi * np.e),
+    ("4", 4),
+    ("2π", 2*np.pi),
+    ("π + e", np.pi + np.e),
+    ("φ² (golden)", ((1+np.sqrt(5))/2)**2),
+]
+
+print(f"{'Constant':<15} {'Value':<12} {'Optimal n':<15} {'Optimal k':<15} {'Error %':<12}")
+print("-" * 70)
+
+for const_name, const_val in constants:
+    # Find n such that 1/α + 156α = n × const_val
+    n_opt = (1/ALPHA_EXPERIMENTAL + 156*ALPHA_EXPERIMENTAL) / const_val
+    # Check if this gives good prediction
+    # Solve: 156α² - n×const×α + 1 = 0
+    a_c = 156
+    b_c = -n_opt * const_val
+    c_c = 1
+    disc = b_c**2 - 4*a_c*c_c
+    if disc >= 0:
+        alpha_t = (-b_c - np.sqrt(disc)) / (2*a_c)
+        err = abs(alpha_t - ALPHA_EXPERIMENTAL) / ALPHA_EXPERIMENTAL * 100
+    else:
+        alpha_t = 0
+        err = float('inf')
+    # Round n to nearest integer
+    n_round = round(n_opt)
+    # Recalculate with rounded n
+    a_c = 156
+    b_c = -n_round * const_val
+    c_c = 1
+    disc = b_c**2 - 4*a_c*c_c
+    if disc >= 0:
+        alpha_r = (-b_c - np.sqrt(disc)) / (2*a_c)
+        err_r = abs(alpha_r - ALPHA_EXPERIMENTAL) / ALPHA_EXPERIMENTAL * 100
+    else:
+        err_r = float('inf')
+    print(f"{const_name:<15} {const_val:<12.6f} {n_opt:<15.6f} {n_round:<15} {err_r:<12.6f}")
+
+print("\n" + "=" * 70)
+print("THE 2×7 STRUCTURE OF 14")
+print("=" * 70)
+print("""
+14 = 2 × 7
+
+Let's see if this factorization has meaning:
+  - 2 = spin degeneracy
+  - 7 = imaginary octonion units (e₁ through e₇)
+
+What if we write: 1/α + 156α = 2 × 7 × π²?
+""")
+
+print("Testing: 1/α + 156α = 2 × 7 × π² = 14π²")
+print("  (This is just our formula restated)")
+print()
+print("But what if spin and octonions enter differently?")
+print()
+
+# What if it's (2π)² × 7/4?
+test_val = (2*np.pi)**2 * 7/4
+print(f"(2π)² × 7/4 = {test_val:.6f}")
+print(f"  vs 14π² = {14*np.pi**2:.6f}")
+print(f"  Ratio: {test_val/(14*np.pi**2):.6f}")
+
+# What about 7 × 2π?
+test_val = 7 * 2 * np.pi
+print(f"\n7 × 2π = {test_val:.6f}")
+print(f"  14π² / (7×2π) = {14*np.pi**2 / test_val:.6f} = π")
+
+print("\n" + "=" * 70)
+print("PHYSICAL HYPOTHESIS")
+print("=" * 70)
+print("""
+If the formula 1/α + 156α = 14π² encodes G₂ structure,
+we might hypothesize:
+
+The FINE STRUCTURE CONSTANT measures the coupling between:
+  - The electromagnetic field (U(1) gauge symmetry)
+  - Some underlying G₂ structure in spacetime/matter
+
+In string/M-theory:
+  - G₂ manifolds appear in 7-dimensional compactifications
+  - The 7 extra dimensions could have G₂ holonomy
+  - 14 = dim(G₂) could relate to the total degrees of freedom
+
+The formula structure:
+  1/α = 14π² - 156α
+
+Says:
+  "The inverse coupling is a geometric constant (14π²)
+   minus an angular momentum correction (156α)"
+
+This is reminiscent of:
+  - QED running of α with energy
+  - But here it's a SELF-CONSISTENT equation
+  - α appears on both sides
+""")
+
+print("\n" + "=" * 70)
+print("FINAL COMPARISON: OUR FORMULA VS WYLER")
+print("=" * 70)
+
+# CORRECT Wyler formula uses 5! = 120, not 5
+wyler_alpha = (9/(16*np.pi**3)) * (np.pi/120)**(1/4)
+our_alpha = alpha_minus
+
+print("Wyler's formula (1969):")
+print(f"  α = (9/16π³) × (π/5!)^(1/4)   [note: 5! = 120]")
+print(f"  α = {wyler_alpha:.12f}")
+test_formula("Wyler (π/5!)", wyler_alpha)
+
+print("\nOur formula (2024):")
+print(f"  1/α + 156α = 14π²")
+print(f"  α = {our_alpha:.12f}")
+test_formula("G₂ formula", our_alpha)
+
+print("\nComparison:")
+print(f"  Wyler error:     {abs(wyler_alpha - ALPHA_EXPERIMENTAL)/ALPHA_EXPERIMENTAL*100:.6f}%")
+print(f"  G₂ formula error: {abs(our_alpha - ALPHA_EXPERIMENTAL)/ALPHA_EXPERIMENTAL*100:.6f}%")
+print(f"  Both are ~0.00006% accurate!")
+
+print("\n" + "=" * 70)
+print("CONNECTION: WYLER'S 5! AND OUR 12")
+print("=" * 70)
+print("""
+Fascinating observation:
+  Wyler uses 5! = 120
+  We use 12 (roots of G₂)
+
+  120 = 5! = 10 × 12
+
+Is there a connection?
+  - 5! = number of permutations of 5 objects
+  - 12 = number of G₂ roots = dimension of icosahedral symmetry?
+  - 120/12 = 10 = dimension of SO(5) ???
+""")
+
+import math
+print("Analyzing the 120 = 5! = 10 × 12 connection:")
+print(f"  5! = {math.factorial(5)}")
+print(f"  10 × 12 = {10 * 12}")
+print(f"  120/12 = {120/12}")
+print()
+print("In Wyler's formula:")
+print(f"  (π/120)^(1/4) = {(np.pi/120)**(1/4):.6f}")
+print()
+print("Could we rewrite Wyler using 12?")
+print(f"  (π/120)^(1/4) = (π/(10×12))^(1/4)")
+print(f"                = (π/10)^(1/4) × (1/12)^(1/4)")
+print(f"                = {(np.pi/10)**(1/4):.6f} × {(1/12)**(1/4):.6f}")
+print(f"                = {(np.pi/10)**(1/4) * (1/12)**(1/4):.6f}")
+
+print("\n" + "-" * 70)
+print("Both formulas involve 12 (G₂ roots) in some form!")
+print("-" * 70)
+
+print("\n" + "=" * 70)
+print("OUTSTANDING MYSTERIES")
+print("=" * 70)
+print(f"""
+We have found: 1/α + 156α = 14π² with 0.000056% error
+
+156 = 12 × 13 = ℓ(ℓ+1) with ℓ = 12 = number of G₂ roots
+14 = dim(G₂) = dimension of exceptional Lie group G₂
+
+UNSOLVED:
+1. Why G₂ specifically? (not SU(3), not E₈?)
+2. What physical mechanism produces this equation?
+3. Can the 0.000056% residual be eliminated?
+4. Is this connected to the Standard Model?
+
+POSSIBLE DIRECTIONS:
+1. G₂ appears in 7D compactifications of M-theory
+2. Octonions have been proposed as fundamental to physics
+3. The formula might be a fixed-point of some RG flow
+4. There may be radiative corrections that complete the formula
+""")
