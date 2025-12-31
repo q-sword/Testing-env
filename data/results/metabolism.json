@@ -1,0 +1,13 @@
+{
+  "metabolism": {
+    "final_ATP": 5.330000000000067,
+    "final_peptides": 10.09999999999983,
+    "energy_consumed": 2921.510422049086,
+    "entropy_exported": 9.738368073496797
+  },
+  "coupling_comparison": {
+    "uncoupled_peptides": 0.1,
+    "coupled_peptides": 1.1000000000000008,
+    "enhancement": 11.000000000000007
+  }
+}

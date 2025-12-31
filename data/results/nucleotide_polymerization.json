@@ -1,0 +1,44 @@
+{
+  "nucleotide_comparison": [
+    {
+      "label": "RNA primordial",
+      "is_rna": true,
+      "catalysis": 1.0,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "gc_content": 0.44,
+      "polymerizations": 49,
+      "hydrolyses": 0
+    },
+    {
+      "label": "RNA + ribozyme",
+      "is_rna": true,
+      "catalysis": 100.0,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "gc_content": 0.34,
+      "polymerizations": 49,
+      "hydrolyses": 0
+    },
+    {
+      "label": "RNA replication",
+      "is_rna": true,
+      "catalysis": 100.0,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "gc_content": 0.56,
+      "polymerizations": 49,
+      "hydrolyses": 0
+    },
+    {
+      "label": "DNA + polymerase",
+      "is_rna": false,
+      "catalysis": 1000000.0,
+      "max_length": 50,
+      "mean_length": 50.0,
+      "gc_content": 0.38,
+      "polymerizations": 49,
+      "hydrolyses": 0
+    }
+  ]
+}
