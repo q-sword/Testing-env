@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-VALIDATED THREE-BODY QUANTUM REGULARIZATION CODE
-November 2025 - Machine Precision Validation
+THREE-BODY SIMULATION WITH PLUMMER SOFTENING
+=============================================
 
-This is the EXACT code that achieved:
-- 100% success rate (30/30 seeds)
-- Energy conservation δE ~ 10⁻¹⁵
-- Hamiltonian preservation |Σλᵢ| < 10⁻¹⁰
+Uses Yoshida 6th order symplectic integrator with softened potential.
+
+CRITICAL: ε must satisfy ε << r (softening << separations)
+Otherwise you're simulating harmonic oscillators, not gravity.
 """
 
 import numpy as np
@@ -148,9 +148,11 @@ def compute_lyapunov(seed, T_total=100, T_lyap=10, dt=0.0001):
     pos = np.random.randn(3, 3) * 0.5
     vel = np.random.randn(3, 3) * 0.3
 
-    # Compute epsilon
-    v_rms = np.sqrt(np.sum(vel**2) / 3)
-    epsilon = HBAR / (np.mean(masses) * v_rms)
+    # Compute epsilon - must be SMALL relative to separations, but with a floor
+    # Original bug: ε = ℏ/(m·v) ≈ 2.5, but r ≈ 0.5, so ε >> r (not gravity!)
+    # Fix: ε = small fraction of initial minimum separation, with minimum floor
+    min_sep = min(np.linalg.norm(pos[i] - pos[j]) for i in range(3) for j in range(i+1, 3))
+    epsilon = max(0.01, 0.05 * min_sep)  # Floor prevents singularity during close encounters
 
     # Create system
     bodies = [Body(masses[i], pos[i], vel[i]) for i in range(3)]
