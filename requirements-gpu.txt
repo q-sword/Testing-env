@@ -1,0 +1,16 @@
+# GPU Acceleration Dependencies (optional)
+# Install one of these for GPU support:
+
+# Option 1: CuPy (NVIDIA CUDA) - Best for numpy drop-in replacement
+# cupy-cuda12x>=12.0.0  # For CUDA 12.x
+# cupy-cuda11x>=12.0.0  # For CUDA 11.x
+
+# Option 2: JAX (Google) - Good for auto-differentiation + GPU
+# jax[cuda12]>=0.4.0    # For CUDA 12.x
+# jax[cuda11]>=0.4.0    # For CUDA 11.x
+
+# Option 3: PyTorch - If you already use it
+# torch>=2.0.0
+
+# The gpu_compute.py module auto-detects available backends
+# and falls back to numpy if nothing is installed.
